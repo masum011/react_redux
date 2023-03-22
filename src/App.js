@@ -1,20 +1,16 @@
 import "./App.css";
-import { Provider } from "react-redux";
-import Component1 from "./reduxContaner/Component1";
-import Component2 from "./reduxContaner/Component2";
-import Home from "./reduxContaner/reduxinsidecomponents/Home";
-import store from "./reduxContaner/Store";
-
+import ComAA from "./components/innerComponents/ComAA";
+import ComA from "./components/ComA";
 function App() {
+  // const {value}=useSelector(state=>state.counter)
+
   return (
-    <Provider store={store}>
       <div className="App">
         <h1>hello redux</h1>
-        <Component1/>
-        <Component2/>
-        <Home/>
+        <ComAA/>
+        <ComA/>
+
       </div>
-    </Provider>
   );
 }
 
