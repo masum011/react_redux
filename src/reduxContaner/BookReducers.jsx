@@ -6,7 +6,8 @@ import { useState } from "react";
 const initionalstate = {
   numberOfBook: 20,
   numberofPen: 0,
-  update_name:"masum"
+  update_name:"masum",
+  about_page:"braineare university"
 };
 const BookReducers = (state = initionalstate, action) => {
     // const [name,setName]=useState("masum reza");
@@ -22,6 +23,9 @@ const BookReducers = (state = initionalstate, action) => {
       return { ...state, numberofPen: state.numberofPen + 2 };
     case "UPDATE_NAME":    
       return {...state, update_name:action.payload };
+
+    case "ABOUT":
+      return {...state}
     default:
       return state;
   }
